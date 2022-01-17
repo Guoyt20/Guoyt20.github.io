@@ -84,7 +84,7 @@
 <meta property="og:url" content="https://guoyt20.github.io/index.html">
 <meta property="og:site_name" content="五重破晓">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="Roviaskol">
 <meta name="twitter:card" content="summary">
 
 
@@ -300,16 +300,16 @@
       
         
           
-            <h1 id="奇异同调"><a href="#奇异同调" class="headerlink" title="奇异同调"></a>奇异同调</h1><blockquote>
+            <h1><span id="奇异同调">奇异同调</span></h1><blockquote>
 <p>Roviaskol 2022.1.17（更新中）</p>
 <p>参考资料：《同调论》姜伯驹 第一章</p>
 </blockquote>
-<p>&lt;%- toc(page.content) %&gt;</p>
+<!--toc-->
 <p>[TOC]</p>
-<h2 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h2><h3 id="范畴论"><a href="#范畴论" class="headerlink" title="范畴论"></a>范畴论</h3><p>我在线性代数中遇到<strong>线性空间</strong>，于拓扑学中遇见<strong>拓扑空间</strong>，再于抽象代数中遇到<strong>群</strong>、<strong>环</strong>和<strong>域</strong>。这些概念是从过去人们所熟知的对象中抽象出来的<strong>数学结构</strong>，而这种“将具体对象抽象为具有相同性质的数学结构”的思想，在数学的发展历程上展现的惊人的效率，已经证明了它的价值。</p>
+<h2><span id="预备知识">预备知识</span></h2><h3><span id="范畴论">范畴论</span></h3><p>我在线性代数中遇到<strong>线性空间</strong>，于拓扑学中遇见<strong>拓扑空间</strong>，再于抽象代数中遇到<strong>群</strong>、<strong>环</strong>和<strong>域</strong>。这些概念是从过去人们所熟知的对象中抽象出来的<strong>数学结构</strong>，而这种“将具体对象抽象为具有相同性质的数学结构”的思想，在数学的发展历程上展现的惊人的效率，已经证明了它的价值。</p>
 <p>范畴论是对数学结构的进一步的抽象，通过函子将不同的数学结构联系起来，揭示各个数学结构的概念之间微妙的平行关系。</p>
 <p><del>事实上，让”在学习同调论之前要先了解范畴论”这件事情显得合理，我做了一些无谓的努力，大概</del></p>
-<h4 id="范畴"><a href="#范畴" class="headerlink" title="范畴"></a>范畴</h4><blockquote>
+<h4><span id="范畴">范畴</span></h4><blockquote>
 <p><strong>定义[范畴]</strong>    一个<strong>范畴</strong>$\mathcal{C}$由以下的要素组成：</p>
 <ul>
 <li>一类数学<strong>对象</strong>$Ob(\mathcal{C})$;</li>
@@ -332,7 +332,7 @@
 <li>{拓扑空间，连续映射的同伦类}</li>
 <li>{拓扑空间X中的点，连接两个点道路的同伦类}<em>（注意后两者，所谓“态射”并不一定是从$X$到$Y$的一个映射。）</em></li>
 </ul>
-<h4 id="协变函子"><a href="#协变函子" class="headerlink" title="协变函子"></a>协变函子</h4><p>更加喜闻乐见的，范畴之间也可以存在映射。</p>
+<h4><span id="协变函子">协变函子</span></h4><p>更加喜闻乐见的，范畴之间也可以存在映射。</p>
 <blockquote>
 <p><strong>定义[协变函子]</strong>    设$\mathcal{C},\mathcal{D}$是范畴。一个协变函子$F:\mathcal{C}\rightarrow\mathcal{D}$是一个对应：</p>
 <ul>
@@ -347,7 +347,7 @@
 <li>忘却函子</li>
 <li>{带基点拓扑空间，保基点连续映射} $\longrightarrow$ {基本群，同态}</li>
 </ul>
-<h4 id="反变函子"><a href="#反变函子" class="headerlink" title="反变函子"></a>反变函子</h4><blockquote>
+<h4><span id="反变函子">反变函子</span></h4><blockquote>
 <p><strong>定义[反变函子]</strong>    设$\mathcal{C},\mathcal{D}$是范畴。一个反变函子$F:\mathcal{C}\rightarrow\mathcal{D}$是一个对应：</p>
 <ul>
 <li>$\mathcal{C}$的每一个对象$X$对应于$\mathcal{D}$的一个对象$F(X)$;</li>
@@ -361,8 +361,8 @@
 <li>{线性空间，线性映射} $\longrightarrow$ {对偶线性空间，对偶线性映射}</li>
 </ul>
 <p>（反变函子的印象就是“把对象映到它身上的函数”。）</p>
-<h3 id="复形"><a href="#复形" class="headerlink" title="复形"></a>复形</h3><p>把一串对象用一串边缘映射串成一个长串，这种名叫复形的对象是同调论中最为关心的结构之一。链复形的每一节由Abel群构成，其他复形虽说并不一定要由Abel群填充（比如说，模/代数复形），但是并不影响我们借由Abel群来理解这个有点繁复的结构。</p>
-<h4 id="链复形和同调群"><a href="#链复形和同调群" class="headerlink" title="链复形和同调群"></a>链复形和同调群</h4><blockquote>
+<h3><span id="复形">复形</span></h3><p>把一串对象用一串边缘映射串成一个长串，这种名叫复形的对象是同调论中最为关心的结构之一。链复形的每一节由Abel群构成，其他复形虽说并不一定要由Abel群填充（比如说，模/代数复形），但是并不影响我们借由Abel群来理解这个有点繁复的结构。</p>
+<h4><span id="链复形和同调群">链复形和同调群</span></h4><blockquote>
 <p><strong>定义[链复形]</strong>    一个<strong>链复形</strong> $C=${ $C_q,\partial_q$ }是一串Abel群$C_q$<em>（q维<strong>链群</strong>）</em>和一串同态$\partial_q:C_q\rightarrow C_{q-1}$<em>（q维<strong>边缘算子</strong>）</em>：</p>
 <script type="math/tex; mode=display">
 ...\longrightarrow C_{q+1}\stackrel{\partial_{q+1}}\longrightarrow C_{q}\stackrel{\partial_{q}}\longrightarrow C_{q-1}\stackrel{\partial_{q-1}}\longrightarrow C_{q-2}\longrightarrow ...</script><p>满足：对于每个q，有$\partial_q \circ \partial_{q+1}=0$.</p>
@@ -374,7 +374,7 @@
 <li>q维<strong>同调群</strong>$H_q(C):=Z_q(C)/B_q(C)$,其元素称为q维<strong>同调类</strong>；</li>
 </ul>
 </blockquote>
-<h4 id="链映射"><a href="#链映射" class="headerlink" title="链映射"></a>链映射</h4><blockquote>
+<h4><span id="链映射">链映射</span></h4><blockquote>
 <p><strong>定义[链映射]</strong>    设$C,D$是链复形。一个<strong>链映射</strong>$f:C\rightarrow D$是一串同态{$f_q:Cq\rightarrow D_q$}满足$\partial_q \circ f_q=f_q \circ \partial_{q+1}$,<br>                                            即下面的图交换：</p>
 <script type="math/tex; mode=display">
 ...\longrightarrow C_{q+1}\stackrel{\partial_{q+1}}\longrightarrow C_{q}\stackrel{\partial_{q}}\longrightarrow C_{q-1}\stackrel{\partial_{q-1}}\longrightarrow C_{q-2}\longrightarrow ...\\
@@ -382,7 +382,7 @@
 ...\longrightarrow D_{q+1}\stackrel{\partial_{q+1}}\longrightarrow D_{q}\stackrel{\partial_{q}}\longrightarrow D_{q-1}\stackrel{\partial_{q-1}}\longrightarrow D_{q-2}\longrightarrow ...</script><p>这样的链映射$f$<strong>诱导同调群的同态</strong>$f_<em>:H_</em>(C)\rightarrow H_<em>(D);\quad f_</em>([z_q])=[f_q(z_q)]$.(需要证明)</p>
 </blockquote>
 <p>函子性：{链复形，链映射}$\longrightarrow${同调群，群同态}</p>
-<h4 id="链同伦"><a href="#链同伦" class="headerlink" title="链同伦"></a>链同伦</h4><blockquote>
+<h4><span id="链同伦">链同伦</span></h4><blockquote>
 <p><strong>定义[链同伦]</strong>    有点长；图有点难画，容许我引用原书中的图</p>
 </blockquote>
 <p>在一些情形下（我感觉是大多数情形），我们可以选择性忽视掉这些映射的下角标，把他们当作算子来处理，这样很多的性质就会变得非常简洁。边缘算子与自身复合为0（$\partial\circ\partial=0$）；链映射和边缘算子可交换（$f\circ\partial=\partial\circ f$）；链同伦的关系可以简化地记为$\partial\circ T+T\circ\partial=f-g$,算的时候也能这么算。</p>
@@ -392,7 +392,7 @@
 <p>链映射之间的链同伦关系，是拓扑范畴{空间，映射}中同伦关系在代数范畴{链复形，链映射}中的翻版。</p>
 </blockquote>
 <p>但是我暂时没看出来直接的关系（除了有同样的名字以外）。暂且按下不表。该进入下一阶段了。</p>
-<h2 id="奇异同调-1"><a href="#奇异同调-1" class="headerlink" title="奇异同调"></a>奇异同调</h2><h3 id="本身的来历和性质"><a href="#本身的来历和性质" class="headerlink" title="本身的来历和性质"></a>本身的来历和性质</h3><h4 id="由单形组合来的奇异同调"><a href="#由单形组合来的奇异同调" class="headerlink" title="由单形组合来的奇异同调"></a>由单形组合来的奇异同调</h4><p>我会补上图的。真的会补上的。</p>
+<h2><span id="奇异同调">奇异同调</span></h2><h3><span id="本身的来历和性质">本身的来历和性质</span></h3><h4><span id="由单形组合来的奇异同调">由单形组合来的奇异同调</span></h4><p>我会补上图的。真的会补上的。</p>
 <blockquote>
 <p><strong>定义[奇异单形]</strong></p>
 <p><strong>定义[奇异链复形]</strong></p>
@@ -415,7 +415,7 @@
 <p><strong>定义[链复形的直和]</strong>（讨论非道路连通空间时用到)</p>
 </blockquote>
 <p>我们可以发现，$H_0$衡量的是道路连通分支，而H1显然和基本群有点关系。事实上H1是基本群的Abel化。</p>
-<h4 id="同伦不变性"><a href="#同伦不变性" class="headerlink" title="同伦不变性"></a>同伦不变性</h4><h4 id="mathcal-U-小奇异链"><a href="#mathcal-U-小奇异链" class="headerlink" title="$\mathcal{U}$-小奇异链"></a>$\mathcal{U}$-小奇异链</h4><h3 id="Mayer-Vietoris同调序列"><a href="#Mayer-Vietoris同调序列" class="headerlink" title="Mayer-Vietoris同调序列"></a>Mayer-Vietoris同调序列</h3><h4 id="正合序列"><a href="#正合序列" class="headerlink" title="正合序列"></a>正合序列</h4><blockquote>
+<h4><span id="同伦不变性">同伦不变性</span></h4><h4><span id="mathcalu-小奇异链">$\mathcal{U}$-小奇异链</span></h4><h3><span id="mayer-vietoris同调序列">Mayer-Vietoris同调序列</span></h3><h4><span id="正合序列">正合序列</span></h4><blockquote>
 <p><strong>定义[正合]</strong>    由Abel群组成的序列</p>
 <script type="math/tex; mode=display">
 C\stackrel{f}\longrightarrow D\stackrel{g}\longrightarrow E</script><p>​                      称为在D正合，如果$Im f=ker g$.</p>
@@ -425,7 +425,7 @@ C\stackrel{f}\longrightarrow D\stackrel{g}\longrightarrow E</script><p>​      
 <p>正合列$0\longrightarrow C\stackrel{\phi}\longrightarrow D\longrightarrow 0$代表$\phi$是同构；</p>
 <p>正合列$0\longrightarrow C\stackrel{f}\longrightarrow D\stackrel{g}\longrightarrow E\longrightarrow 0 $代表$f$是单射，$g$是满射。这称为短正合列。</p>
 </blockquote>
-<h4 id="边缘同态和图上追踪"><a href="#边缘同态和图上追踪" class="headerlink" title="边缘同态和图上追踪"></a>边缘同态和图上追踪</h4><h4 id="Mayer-Vietoris耦和同调序列"><a href="#Mayer-Vietoris耦和同调序列" class="headerlink" title="Mayer-Vietoris耦和同调序列"></a>Mayer-Vietoris耦和同调序列</h4><h2 id="好例子"><a href="#好例子" class="headerlink" title="好例子"></a>好例子</h2><p>我真的能写完吗？好多啊。</p>
+<h4><span id="边缘同态和图上追踪">边缘同态和图上追踪</span></h4><h4><span id="mayer-vietoris耦和同调序列">Mayer-Vietoris耦和同调序列</span></h4><h2><span id="好例子">好例子</span></h2><p>我真的能写完吗？好多啊。</p>
 
           
         
@@ -546,13 +546,13 @@ C\stackrel{f}\longrightarrow D\stackrel{g}\longrightarrow E</script><p>​      
         
           
             <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<h2><span id="quick-start">Quick Start</span></h2><h3><span id="create-a-new-post">Create a new post</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3><span id="run-server">Run server</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3><span id="generate-static-files">Generate static files</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3><span id="deploy-to-remote-sites">Deploy to remote sites</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
           
@@ -680,7 +680,7 @@ C\stackrel{f}\longrightarrow D\stackrel{g}\longrightarrow E</script><p>​      
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">Roviaskol</span>
 
   
 </div>
